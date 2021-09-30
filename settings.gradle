@@ -1,0 +1,2 @@
+rootProject.name = "Quize_With_MVC"
+include ':app'
