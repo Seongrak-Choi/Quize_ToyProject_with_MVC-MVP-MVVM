@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".src.solving.SolvingActivity"/>
+        <activity android:name=".src.result.ResultActivity"/>
     </application>
 
 </manifest>

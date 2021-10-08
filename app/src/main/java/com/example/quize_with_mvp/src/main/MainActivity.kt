@@ -9,6 +9,7 @@ import com.example.quize_with_mvp.src.main.presenter.MainPresenter
 import com.example.quize_with_mvp.src.solving.SolvingActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate), MainContract.View {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val mainPresenter = MainPresenter(this)
@@ -20,8 +21,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     }
 
     override fun startQuize(name:String) {
-        var intent = Intent(applicationContext, SolvingActivity::class.java)
-        if(name.isEmpty())
+        var intent = Intent(this, SolvingActivity::class.java)
+        if(name.isNotEmpty())
             intent.putExtra("name",name)
         startActivity(intent)
     }
